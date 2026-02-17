@@ -62,8 +62,9 @@ function f1(x){
 
 
 async function main(){
+    let num=Math.round(Math.random()*10)
     try {
-        await f1(4)
+        await f1(num)
         console.log("Program completed successfully")
     } catch (err) {
         console.log("Promise rejected!")
