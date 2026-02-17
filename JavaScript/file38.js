@@ -1,0 +1,10 @@
+const d=new Date()
+// d.setFullYear(2025)
+// d.setMonth(11)
+// d.setHours(21)
+// d.setMinutes(10)
+// d.setSeconds(10)
+// d.setMilliseconds(1)
+d.setTime(9999990000000)
+console.log(d)
+

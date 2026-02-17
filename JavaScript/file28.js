@@ -27,18 +27,22 @@
 // add(4,5,6,9);
 
 
-function add(...arr){
-    let sum=arr.reduce((total,num)=>{
+// function add(...arr){                                               //rest operator
+//     let sum=arr.reduce((total,num)=>{
+//         return total+num
+//     },0)
+//     return sum
+// }
+
+// const res=add(7,5,8);
+// console.log(res)
+
+
+const add= (...arg)=>{
+    let sum=args.reduce((total,num)=>{
         return total+num
     },0)
-    return sum
 }
 
-const res=add(7,5,8);
+const res=add(2,4,5,9)
 console.log(res)
-
-
-
-// function add((a)=>{
-//     console.log(arguments);
-// })

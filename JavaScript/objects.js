@@ -1,7 +1,8 @@
-// const student={
-//     name:"tanya",
-//     age:21,
-// }
+const student={
+    name:"tanya",
+    age:21,
+}
+
 // console.log(student)
 // console.log(student.name)
 
@@ -19,10 +20,3 @@
 // console.log(obj)
 
 
-
-
-// const item=()=>{
-//     return 10
-// }
-// const res=item()
-// console.log(res);
