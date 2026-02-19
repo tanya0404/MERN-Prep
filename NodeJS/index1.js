@@ -16,6 +16,7 @@ app.get("/home/page1", (req, res) => {
     console.log(req.url);
     console.log(req.method);
     console.log(req.body);
+    console.log(req.headers)
     console.log(req.headers.authorization)
     res.send("home page/page 1");
 });
