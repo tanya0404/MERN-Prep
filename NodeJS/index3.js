@@ -11,9 +11,9 @@ const app=express()
 // })
 
 
-app.get("/",(req,res)=>{
-    res.send("hello "+req.query.name+" "+req.query.age);           //http://localhost:8080/?name=tanya&age=21
-})
+// app.get("/",(req,res)=>{
+//     res.send("hello "+req.query.name+" "+req.query.age);        //http://localhost:8080/?name=tanya&age=21
+// })
 
 app.listen(8080),()=>{
     console.log("server start")
