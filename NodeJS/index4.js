@@ -26,6 +26,16 @@ app.post("/",(req,res)=>{                    //here we are adding new object in 
     res.json(user)
 })
 
+app.delete("/:id", (req, res) => {                   //here we are deleting one id and printing remainings
+  const num = Number(req.params.id);
+
+  const find = user.find((e) => e.id === num);
+
+  user = user.filter((e) => e.id !== num);
+
+  res.json(user);
+});
+
 app.get("/:id",(req,res)=>{                   //find the id and printing that object only
     const num=Number(req.params.id)
     const find=user.find((e)=>
