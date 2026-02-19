@@ -9,29 +9,19 @@
 // console.log("Hello" +name)
 // console.log(`Hello ${name}`)
 
-// let a=10
-// let b=4
-
-// console.log(a+b)
-// console.log(a-b)
-// console.log(a*b)
-// console.log(a/b)
-// console.log(a%b)
-// console.log(a**b)
 
 
 // let X=10
 // let Y="10"
 
-// console.log(X==Y)
-// console.log(X===Y)
+// console.log(X==Y)                                //checks value only
+// console.log(X===Y)                               //checks value and datatype also
 
 // console.log(a>b && a>20)
 // console.log(a>b || a>20)
 
 
 // if(a>b) console.log("a is greater");
-
 // else if(a<b) console.log("b is greater");
 // else{
 //     console.log("both are equal");
@@ -97,7 +87,15 @@
 // let result=add(2,6)
 // console.log(result)
 
-
+/*
+| Feature         | var             | let       | const     |
+| --------------- | --------------- | --------- | --------- |
+| Scope           | Function        | Block     | Block     |
+| Re-declare      | Yes             | No        | No        |
+| Re-assign       | Yes             | Yes       | No        |
+| Hoisting        | Yes (undefined) | Yes (TDZ) | Yes (TDZ) |
+| Must initialize | No              | No        | Yes       |
+*/
 
 
 // let a=10
@@ -112,8 +110,6 @@
 
 // f1()
 // console.log(a)
-
-
 
 
 

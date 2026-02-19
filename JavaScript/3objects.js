@@ -1,7 +1,7 @@
-const student={
-    name:"tanya",
-    age:21,
-}
+// const student={
+//     name:"tanya",
+//     age:21,
+// }
 
 // console.log(student)
 // console.log(student.name)
@@ -18,5 +18,7 @@ const student={
 
 // const obj= {...student,city:"abc"}              // {it will add or modify the key pairs }
 // console.log(obj)
+
+
 
 
