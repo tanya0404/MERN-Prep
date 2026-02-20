@@ -86,7 +86,7 @@ const auth = (req, res, next) => {
     const token=req.headers.authorization;
     // console.log(typeof(token))
     const val=token.split(" ")
-    console.log(val)
+    // console.log(val)
     if(val[1]==="1234"){
         next()
     }
