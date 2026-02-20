@@ -127,7 +127,13 @@ const auth = (req, res, next) => {
 };
 
 app.post("/login",(req,res)=>{
-    res.send(jwt)
+    const data=req.body
+    if(data.email==="john@gmail.com" && data.password==="1234"){
+        res.send(jwt)
+    }
+    else{
+        res.send("Invalid credentials")
+    }
 })
 
 app.get("/",auth, (req, res) => {
