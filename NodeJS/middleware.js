@@ -77,25 +77,60 @@
 //------------------------------------------------------------------------------------------------------------
 
 
+// import express from "express";
+// const app = express();
+
+// app.use(express.json());
+
+// const auth = (req, res, next) => {
+//     const token=req.headers.authorization;
+//     // console.log(typeof(token))
+//     const val=token.split(" ")
+//     // console.log(val)
+//     if(val[1]==="1234"){
+//         next()
+//     }
+//     else{
+//         res.send("Denied")
+//     }
+// };
+// app.use(auth)
+// app.get("/", (req, res) => {
+//     res.send("Welcome");
+// });
+
+// app.listen(8081, () => {
+//     console.log("Server running on port 8081");
+// });
+
+
+//----------------------------------------------------------------------------------------------------------------
+
+
 import express from "express";
 const app = express();
 
 app.use(express.json());
+const jwt=Math.round(Math.random()*10000).toString();
+console.log(jwt)
 
 const auth = (req, res, next) => {
     const token=req.headers.authorization;
-    // console.log(typeof(token))
+
     const val=token.split(" ")
-    // console.log(val)
-    if(val[1]==="1234"){
+    if(val[1]===jwt){
         next()
     }
     else{
         res.send("Denied")
     }
 };
-app.use(auth)
-app.get("/", (req, res) => {
+
+app.post("/login",(req,res)=>{
+    res.send(jwt)
+})
+
+app.get("/",auth, (req, res) => {
     res.send("Welcome");
 });
 
