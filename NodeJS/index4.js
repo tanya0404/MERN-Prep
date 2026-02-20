@@ -10,7 +10,7 @@ const app=express()
 //     res.json(user)
 // })
 
-app.use(express.json())
+app.use(express.json())                                           //{app.use}middleware(it will convert all req.body(json) data into js object and {express.json()} is converting )
 
 let user=[{
     id:1,name:"john",email:"john@gmail.com",role:"student"},
@@ -26,20 +26,17 @@ app.post("/",(req,res)=>{                    //here we are adding new object in 
     res.json(user)
 })
 
-app.delete("/:id", (req, res) => {                   //here we are deleting one id and printing remainings
+app.delete("/:id", (req, res) => {                   //here we are giving one id and printing all remainings except that one
   const num = Number(req.params.id);
-
-  const find = user.find((e) => e.id === num);
-
   user = user.filter((e) => e.id !== num);
 
   res.json(user);
 });
 
 app.get("/:id",(req,res)=>{                   //find the id and printing that object only
-    const num=Number(req.params.id)
+    // const num=Number(req.params.id)
     const find=user.find((e)=>
-        e.id===num
+        e.id===Number(req.params.id)
     )
 
 

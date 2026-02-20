@@ -1,11 +1,12 @@
 // const url="https://jsonplaceholder.typicode.com/users"
 
-// async function fetchData(){
-//     const response=await fetch(url)
-//     const res=await response.json()
-//     console.log(res)
-// }
-// fetchData()
+const url="http://localhost:8080"
+async function fetchData(){
+    const response=await fetch(url)
+    const res=await response.json()
+    console.log(res)
+}
+fetchData()
 
 
 //-----------------------------------------------------------------------

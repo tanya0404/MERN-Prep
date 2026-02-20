@@ -12,7 +12,7 @@ const app=express()
 
 
 // app.get("/",(req,res)=>{
-//     res.send("hello "+req.query.name+" "+req.query.age);        //http://localhost:8080/?name=tanya&age=21
+//     res.send("hello "+req.query.name+" "+req.query.age);        //http://localhost:8080/?name=tanya&age=21 (query string){data is going through request object }
 // })
 
 app.listen(8080),()=>{
