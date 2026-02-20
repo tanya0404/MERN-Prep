@@ -26,22 +26,79 @@
 //--------------------------------------------------------------------------------------------------------------
 
 
-import express from 'express'
-const app=express()
+// import express from 'express'
+// const app=express()
 
-app.listen(8081)
+// app.listen(8081)
+
+// const auth = (req, res, next) => {
+//     if (req.url==="/1234") {
+//         next(); 
+//     } else {
+//         res.send("Not Valid");
+//     }
+// };
+
+// app.use(auth)
+// app.get("/:id",(req,res)=>{                      
+//     res.send("welcome")                                
+// })
+
+
+//---------------------------------------------------------------------------------------------------------
+
+
+
+// import express from "express";
+// const app = express();
+
+// app.use(express.json());
+
+// const auth = (req, res, next) => {
+//     const token=req.body.token;
+//     console.log(req.body)
+//     if(token==="1234"){
+//         next()
+//     }
+//     else{
+//         res.send("Denied")
+//     }
+// };
+// app.use(auth)
+// app.post("/", (req, res) => {
+//     res.send("Welcome");
+// });
+
+// app.listen(8081, () => {
+//     console.log("Server running on port 8081");
+// });
+
+
+
+
+
+import express from "express";
+const app = express();
+
+app.use(express.json());
 
 const auth = (req, res, next) => {
-    if (req.url==="/1234") {
-        next(); 
-    } else {
-        res.send("Not Valid");
+    const token=req.headers.authorization;
+    // console.log(typeof(token))
+    const val=token.split(" ")
+    console.log(val)
+    if(val[1]==="1234"){
+        next()
+    }
+    else{
+        res.send("Denied")
     }
 };
-
 app.use(auth)
-app.get("/:id",auth,(req,res)=>{                      
-    res.send("welcome")                                
-})
+app.get("/", (req, res) => {
+    res.send("Welcome");
+});
 
-
+app.listen(8081, () => {
+    console.log("Server running on port 8081");
+});
